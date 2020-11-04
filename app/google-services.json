@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "756474053167",
+    "firebase_url": "https://sibs-2de39.firebaseio.com",
+    "project_id": "sibs-2de39",
+    "storage_bucket": "sibs-2de39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756474053167:android:5b76692eea89288bde3cda",
+        "android_client_info": {
+          "package_name": "com.vero.sibs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756474053167-sqj6oarm3l1kaob31stu6g31869oqkm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB21KQzbqCG-Hh36NMbBNZ9T-ZY-DyIoL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756474053167-sqj6oarm3l1kaob31stu6g31869oqkm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
