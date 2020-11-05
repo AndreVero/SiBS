@@ -19,6 +19,10 @@ android {
         consumerProguardFiles "consumer-rules.pro"
     }
 
+    buildFeatures {
+        dataBinding = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -29,6 +33,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
@@ -41,10 +49,23 @@ dependencies {
 
     //hilt
     implementation "com.google.dagger:hilt-android:$versions.daggerHiltCoreVersion"
+    implementation "androidx.hilt:hilt-common:$versions.daggerHiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$versions.daggerHiltVersion"
     kapt "com.google.dagger:hilt-android-compiler:$versions.daggerHiltCoreVersion"
+    kapt "androidx.hilt:hilt-compiler:$versions.daggerHiltVersion"
 
+    //ui
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    //navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
+
+    //test
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation "com.google.truth:truth:$versions.truthVersion"
+    androidTestImplementation "com.google.truth:truth:$versions.truthVersion"
 
 }

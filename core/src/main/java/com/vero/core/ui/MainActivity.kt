@@ -1,7 +1,8 @@
-package com.vero.sibs
+package com.vero.core.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.vero.core.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
