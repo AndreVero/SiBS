@@ -26,6 +26,10 @@ android {
         }
     }
 
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -41,6 +45,9 @@ dependencies {
     //hilt
     implementation "com.google.dagger:hilt-android:$versions.daggerHiltCoreVersion"
     kapt "com.google.dagger:hilt-android-compiler:$versions.daggerHiltCoreVersion"
+
+    //storage
+    implementation "androidx.datastore:datastore-preferences:$versions.dataStorageVersion"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

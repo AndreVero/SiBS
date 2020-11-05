@@ -1,8 +1,6 @@
 include ':core'
 include ':core-network-impl'
-include ':core-network-api'
 include ':core-utils'
 include ':core-db-impl'
-include ':core-db-api'
 include ':app'
 rootProject.name = "SiBS"

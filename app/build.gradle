@@ -52,6 +52,9 @@ dependencies {
     //ui
     implementation "com.google.android.material:material:$versions.materialVersion"
 
+    //storage
+    implementation "androidx.datastore:datastore-preferences:$versions.dataStorageVersion"
+
     //test
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

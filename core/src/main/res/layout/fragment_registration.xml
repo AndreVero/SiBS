@@ -67,6 +67,7 @@
             android:textColor="@color/colorPrimaryDark"
             android:backgroundTint="@drawable/default_material_button_background"
             android:enabled="@{viewModel.valid}"
+            android:onClick="@{() -> viewModel.signUpUser()}"
             app:cornerRadius="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

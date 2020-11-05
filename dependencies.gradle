@@ -49,9 +49,11 @@ ext.versions = [
         timberVersion               : '4.7.1',
 
         //firebase
-
         firebaseRealtimeDatabase    : '19.5.1',
         firebaseStorage             : '22.0.0',
+
+        //local storage
+        dataStorageVersion          : '1.0.0-alpha02',
 
         // unit test
         truthVersion                : '1.0.1',
