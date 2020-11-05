@@ -10,8 +10,8 @@ ext.versions = [
         kotlin                      : '1.4.10',
 
         // support library
-        materialVersion             : '1.2.0-alpha05',
-        constraintVersion           : '2.0.1',
+        materialVersion             : '1.2.1',
+        constraintVersion           : '2.0.4',
 
         // architecture components
         fragmentVersion             : '1.2.5',
@@ -64,5 +64,6 @@ ext.versions = [
         espressoVersion             : '3.2.0',
         mockitoKotlinVersion        : '2.2.0',
         mockitoInlineVersion        : '3.3.3',
-        androidxJRunner             : '1.1.2'
+        androidxJRunner             : '1.1.2',
+        coreExecutorTestingVersion  : "2.1.0"
 ]

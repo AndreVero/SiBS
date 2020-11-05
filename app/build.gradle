@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 apply from: '../dependencies.gradle'
 
 android {
@@ -16,6 +17,10 @@ android {
         versionName "$versions.versionName"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        dataBinding = true
     }
 
     buildTypes {
@@ -39,7 +44,13 @@ dependencies {
 
     //hilt
     implementation "com.google.dagger:hilt-android:$versions.daggerHiltCoreVersion"
+    implementation "androidx.hilt:hilt-common:$versions.daggerHiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$versions.daggerHiltVersion"
     kapt "com.google.dagger:hilt-android-compiler:$versions.daggerHiltCoreVersion"
+    kapt "androidx.hilt:hilt-compiler:$versions.daggerHiltVersion"
+
+    //ui
+    implementation "com.google.android.material:material:$versions.materialVersion"
 
     //test
     testImplementation 'junit:junit:4.12'

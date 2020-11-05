@@ -3,7 +3,7 @@
     package="com.vero.sibs">
 
     <application
-        android:name=".SibsApplication"
+        android:name="com.vero.core.SibsApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">Имя</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="sign_up">Зарегистрироваться</string>
+</resources>
