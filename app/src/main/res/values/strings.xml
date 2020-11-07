@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SiBS</string>
+    <string name="user_sign_up_success">Пользователь успешно зарегистрирован!</string>
+    <string name="name">Имя</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="sign_up">Зарегистрироваться</string>
 </resources>

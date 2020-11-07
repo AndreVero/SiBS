@@ -53,34 +53,4 @@ dependencies {
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$versions.daggerHiltVersion"
     kapt "com.google.dagger:hilt-android-compiler:$versions.daggerHiltCoreVersion"
     kapt "androidx.hilt:hilt-compiler:$versions.daggerHiltVersion"
-
-    //ui
-    implementation "com.google.android.material:material:$versions.materialVersion"
-    implementation "androidx.constraintlayout:constraintlayout:$versions.constraintVersion"
-
-    //navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
-
-    // unit test
-    testImplementation "com.google.truth:truth:$versions.truthVersion"
-    testImplementation "junit:junit:$versions.junitVersion"
-    testImplementation "androidx.test:core:$versions.androidxTest"
-    testImplementation "org.robolectric:robolectric:$versions.robolectricVersion"
-    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockitoKotlinVersion"
-    testImplementation "org.mockito:mockito-inline:$versions.mockitoInlineVersion"
-    testImplementation "androidx.arch.core:core-testing:$versions.coreExecutorTestingVersion"
-
-    androidTestImplementation "com.google.truth:truth:$versions.truthVersion"
-    androidTestImplementation "junit:junit:$versions.junitVersion"
-    androidTestImplementation "androidx.test:core:$versions.androidxTest"
-    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:2.12.1"
-    androidTestImplementation "org.mockito:mockito-core:2.21.0"
-    androidTestImplementation "androidx.test.ext:junit:$versions.androidxJRunner"
-    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
-
-    //storage
-    implementation "androidx.datastore:datastore-preferences:$versions.dataStorageVersion"
-
-    implementation project(':core-db-impl')
 }

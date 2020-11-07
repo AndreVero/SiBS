@@ -67,5 +67,6 @@ ext.versions = [
         mockitoKotlinVersion        : '2.2.0',
         mockitoInlineVersion        : '3.3.3',
         androidxJRunner             : '1.1.2',
-        coreExecutorTestingVersion  : "2.1.0"
+        coreExecutorTestingVersion  : "2.1.0",
+        kotlinCoroutinesTestVersion : "1.4.1"
 ]
