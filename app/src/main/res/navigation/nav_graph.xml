@@ -6,5 +6,13 @@
     <fragment
         android:id="@+id/registrationFragment2"
         android:name="com.vero.sibs.ui.registration.RegistrationFragment"
-        android:label="RegistrationFragment" />
+        android:label="RegistrationFragment" >
+        <action
+            android:id="@+id/action_registrationFragment2_to_mainFragment2"
+            app:destination="@id/mainFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment2"
+        android:name="com.vero.sibs.ui.main.MainFragment"
+        android:label="MainFragment" />
 </navigation>

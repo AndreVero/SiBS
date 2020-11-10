@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:paddingTop="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_marginTop="32dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_buy"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/btnSell"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_sell_main"
+            android:scaleType="fitXY"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginBottom="72dp"
+            android:layout_marginStart="64dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnBuy"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_buy_main"
+            android:scaleType="fitXY"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginBottom="72dp"
+            android:layout_marginEnd="64dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
