@@ -31,6 +31,7 @@ class RegistrationFragmentTest {
         launchFragmentInHiltContainer<RegistrationFragment>() {
             Navigation.setViewNavController(requireView(), navController)
         }
+
         onView(allOf(withId(R.id.etName), isDisplayed())).perform(replaceText("Name")) 
         onView(allOf(withId(R.id.etPhone), isDisplayed())).perform(replaceText("12345678901")).perform(closeSoftKeyboard())
         onView(allOf(withId(R.id.btnSignUp), isDisplayed())).perform(click())

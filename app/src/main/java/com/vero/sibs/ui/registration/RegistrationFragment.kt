@@ -42,7 +42,7 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
     }
 
     private fun initObservers() {
-        viewModel.isRegister.observe(viewLifecycleOwner, { isRegister ->
+        viewModel.isAuthorize.observe(viewLifecycleOwner, { isRegister ->
             if (isRegister)
                 findNavController().navigate(
                     RegistrationFragmentDirections.actionRegistrationFragment2ToMainFragment2()

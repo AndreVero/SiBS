@@ -6,7 +6,7 @@ import org.junit.Before
 import org.junit.Test
 import java.lang.StringBuilder
 
-class PhoneValidatorImplTest {
+class PhoneValidatorTest {
 
     private lateinit var phoneValidatorImpl : PhoneValidator
 

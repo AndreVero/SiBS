@@ -41,17 +41,17 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.miOpenProfile ->
-                Toast.makeText(context, R.string.user_sign_up_success, Toast.LENGTH_LONG).show()
+                Toast.makeText(context, R.string.profile, Toast.LENGTH_LONG).show()
         }
         return super.onOptionsItemSelected(item)
     }
 
     private fun initListeners() {
         binding.btnBuy.setOnClickListener {
-            Toast.makeText(context, R.string.user_sign_up_success, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.buy, Toast.LENGTH_LONG).show()
         }
         binding.btnSell.setOnClickListener {
-            Toast.makeText(context, R.string.user_sign_up_success, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.sell, Toast.LENGTH_LONG).show()
         }
     }
 }

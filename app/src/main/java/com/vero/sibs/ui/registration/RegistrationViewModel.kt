@@ -5,21 +5,21 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vero.sibs.ui.registration.utils.NameValidator
-import com.vero.sibs.ui.registration.utils.PhoneValidator
-import com.vero.core_db_impl.api.DataStorage
+import com.vero.sibs.utils.NameValidator
+import com.vero.sibs.utils.PhoneValidator
+import com.vero.core_db_impl.api.LocalStorage
 import com.vero.core.model.User
 import kotlinx.coroutines.launch
 
 class RegistrationViewModel @ViewModelInject constructor (
     private val phoneValidator: PhoneValidator,
     private val nameValidator: NameValidator,
-    private val dataStorage: DataStorage
+    private val localStorage: LocalStorage
 ) : ViewModel() {
 
     val phoneNumber = MutableLiveData("")
     val name = MutableLiveData("")
-    val isRegister = MutableLiveData(false)
+    val isAuthorize = MutableLiveData(false)
 
     val valid = MediatorLiveData<Boolean>().apply {
         addSource(phoneNumber) {
@@ -32,12 +32,12 @@ class RegistrationViewModel @ViewModelInject constructor (
 
     fun signUpUser() {
         viewModelScope.launch {
-            dataStorage.saveUser(
+            localStorage.saveUser(
                 User(
                     username = name.value ?: "",
                     phone = phoneNumber.value ?: "")
             )
-            isRegister.postValue(true)
+            isAuthorize.postValue(true)
         }
     }
 }

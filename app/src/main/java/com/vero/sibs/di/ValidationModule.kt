@@ -1,9 +1,7 @@
 package com.vero.sibs.di
 
-import com.vero.sibs.ui.registration.utils.NameValidator
-import com.vero.sibs.ui.registration.utils.PhoneValidator
-import com.vero.sibs.ui.registration.utils.impl.NameValidatorImpl
-import com.vero.sibs.ui.registration.utils.impl.PhoneValidatorImpl
+import com.vero.sibs.utils.NameValidator
+import com.vero.sibs.utils.PhoneValidator
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,11 +9,11 @@ import dagger.hilt.android.components.ActivityRetainedComponent
 
 @Module
 @InstallIn(ActivityRetainedComponent::class)
-object RegistrationModule {
+object ValidationModule {
 
     @Provides
-    fun providePhoneValidator() : PhoneValidator = PhoneValidatorImpl()
+    fun providePhoneValidator() = PhoneValidator()
 
     @Provides
-    fun provideNameValidator() : NameValidator = NameValidatorImpl()
+    fun provideNameValidator() = NameValidator()
 }

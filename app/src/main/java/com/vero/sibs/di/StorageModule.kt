@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.datastore.DataStore
 import androidx.datastore.preferences.Preferences
 import androidx.datastore.preferences.createDataStore
-import com.vero.core_db_impl.api.DataStorage
-import com.vero.sibs.fake.FakeDataStorage
+import com.vero.core_db_impl.api.LocalStorage
+import com.vero.sibs.fake.FakeLocalStorage
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,6 +21,6 @@ object StorageModule {
             = appContext.createDataStore("data_store")
 
     @Provides
-    fun provideDataStorage(dataStore: DataStore<Preferences>) : DataStorage
-            = FakeDataStorage()
+    fun provideDataStorage() : LocalStorage
+            = FakeLocalStorage()
 }
