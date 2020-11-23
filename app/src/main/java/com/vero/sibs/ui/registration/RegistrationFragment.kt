@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.vero.sibs.R
 import com.vero.sibs.databinding.FragmentRegistrationBinding
+import com.vero.sibs.ext.showToolbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -33,7 +34,7 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
 
     override fun onResume() {
         super.onResume()
-        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
+        showToolbar(false)
     }
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
