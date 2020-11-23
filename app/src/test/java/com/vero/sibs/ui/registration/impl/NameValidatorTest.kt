@@ -1,22 +1,23 @@
 package com.vero.sibs.ui.registration.impl
 
 import com.google.common.truth.Truth.assertThat
+import com.vero.sibs.utils.NameValidator
 import org.junit.Before
 import org.junit.Test
 import java.lang.StringBuilder
 
-class NameValidatorImplTest {
+class NameValidatorTest {
 
-    private lateinit var nameValidatorImpl: com.vero.sibs.ui.registration.utils.impl.NameValidatorImpl
+    private lateinit var nameValidator: NameValidator
 
     @Before
     fun setUp() {
-        nameValidatorImpl = com.vero.sibs.ui.registration.utils.impl.NameValidatorImpl()
+        nameValidator = NameValidator()
     }
 
     @Test
     fun `empty name return false`() {
-        val result = nameValidatorImpl.nameIsValid("")
+        val result = nameValidator.nameIsValid("")
         assertThat(result).isFalse()
     }
 
@@ -25,13 +26,13 @@ class NameValidatorImplTest {
         val name = StringBuilder()
         for (i in 0..30)
             name.append(i)
-        val result = nameValidatorImpl.nameIsValid(name.toString())
+        val result = nameValidator.nameIsValid(name.toString())
         assertThat(result).isFalse()
     }
 
     @Test
     fun `name with count of symbols in range 3-30 return true`() {
-        val result = nameValidatorImpl.nameIsValid("Name")
+        val result = nameValidator.nameIsValid("Name")
         assertThat(result).isTrue()
     }
 }

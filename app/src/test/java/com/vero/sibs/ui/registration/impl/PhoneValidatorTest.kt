@@ -1,17 +1,18 @@
 package com.vero.sibs.ui.registration.impl
 
 import com.google.common.truth.Truth.assertThat
+import com.vero.sibs.utils.PhoneValidator
 import org.junit.Before
 import org.junit.Test
 import java.lang.StringBuilder
 
-class PhoneValidatorImplTest {
+class PhoneValidatorTest {
 
-    private lateinit var phoneValidatorImpl: com.vero.sibs.ui.registration.utils.impl.PhoneValidatorImpl
+    private lateinit var phoneValidatorImpl : PhoneValidator
 
     @Before
     fun setUp() {
-        phoneValidatorImpl = com.vero.sibs.ui.registration.utils.impl.PhoneValidatorImpl()
+        phoneValidatorImpl = PhoneValidator()
     }
 
     @Test

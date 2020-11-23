@@ -4,4 +4,8 @@
     <string name="name">Имя</string>
     <string name="phone_number">Номер телефона</string>
     <string name="sign_up">Зарегистрироваться</string>
+    <string name="profile">Профиль</string>
+    <string name="logOut">Выход</string>
+    <string name="buy">Купить</string>
+    <string name="sell">Продать</string>
 </resources>

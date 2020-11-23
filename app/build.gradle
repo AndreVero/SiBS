@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
 apply plugin: 'dagger.hilt.android.plugin'
 apply from: '../dependencies.gradle'
 
@@ -67,20 +68,19 @@ dependencies {
     testImplementation "junit:junit:$versions.junitVersion"
     testImplementation "androidx.test:core:$versions.androidxTest"
     testImplementation "org.robolectric:robolectric:$versions.robolectricVersion"
-    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockitoKotlinVersion"
-    testImplementation "org.mockito:mockito-inline:$versions.mockitoInlineVersion"
     testImplementation "androidx.arch.core:core-testing:$versions.coreExecutorTestingVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.kotlinCoroutinesTestVersion"
+    testImplementation "io.mockk:mockk:$versions.mockkVersion"
 
     //ui test
     androidTestImplementation "com.google.truth:truth:$versions.truthVersion"
     androidTestImplementation "junit:junit:$versions.junitVersion"
     androidTestImplementation "androidx.test:core:$versions.androidxTest"
-    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:2.12.1"
-    androidTestImplementation "org.mockito:mockito-core:2.21.0"
     androidTestImplementation "androidx.test.ext:junit:$versions.androidxJRunner"
     androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:2.12.1"
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation "org.mockito:mockito-core:2.21.0"
 
     androidTestImplementation "com.google.dagger:hilt-android-testing:$versions.daggerHiltCoreVersion"
     kaptAndroidTest "com.google.dagger:hilt-android-compiler:$versions.daggerHiltCoreVersion"
