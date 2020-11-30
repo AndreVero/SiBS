@@ -14,5 +14,13 @@
     <fragment
         android:id="@+id/mainFragment2"
         android:name="com.vero.sibs.ui.main.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment2_to_buyFragment"
+            app:destination="@id/buyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.vero.sibs.ui.buy.BuyFragment"
+        android:label="BuyFragment" />
 </navigation>

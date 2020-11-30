@@ -14,7 +14,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 
 @Module
 @InstallIn(ActivityRetainedComponent::class)
-object StorageModule {
+object LocalStorageModule {
 
     @Provides
     fun provideDataStore(@ApplicationContext appContext: Context) : DataStore<Preferences>

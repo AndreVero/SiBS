@@ -1,13 +1,15 @@
 package com.vero.sibs.ui.main
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.vero.sibs.R
 import com.vero.sibs.databinding.FragmentMainBinding
+import com.vero.sibs.ext.showToolbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -19,7 +21,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         setHasOptionsMenu(true)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container,false)
         binding.lifecycleOwner = this
@@ -29,7 +31,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (requireActivity() as AppCompatActivity).supportActionBar?.show()
+        showToolbar(true)
         initListeners()
     }
 
@@ -48,8 +50,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     private fun initListeners() {
         binding.btnBuy.setOnClickListener {
-            Toast.makeText(context, R.string.buy, Toast.LENGTH_LONG).show()
+            findNavController().navigate(
+                MainFragmentDirections.actionMainFragment2ToBuyFragment()
+            )
         }
+
         binding.btnSell.setOnClickListener {
             Toast.makeText(context, R.string.sell, Toast.LENGTH_LONG).show()
         }

@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.vero.sibs.R
 import com.vero.sibs.databinding.FragmentRegistrationBinding
+import com.vero.sibs.ext.showToolbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,7 +23,7 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_registration, container,false)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
@@ -33,7 +33,7 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
 
     override fun onResume() {
         super.onResume()
-        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
+        showToolbar(false)
     }
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,8 +42,8 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
     }
 
     private fun initObservers() {
-        viewModel.isAuthorize.observe(viewLifecycleOwner, { isRegister ->
-            if (isRegister)
+        viewModel.isAuthorize.observe(viewLifecycleOwner, { isAuthorize ->
+            if (isAuthorize)
                 findNavController().navigate(
                     RegistrationFragmentDirections.actionRegistrationFragment2ToMainFragment2()
                 )
